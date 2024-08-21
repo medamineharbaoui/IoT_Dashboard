@@ -54,25 +54,25 @@ Containerization with Docker
 
     2- The Node.js server subscribes to the MQTT topic, processes the data, and stores it in the MySQL database. 
 
-![Second Screenshot](Screenshots\SDM3.png)
+![Second Screenshot](Screenshots/SDM3.png)
 
-![Third Screenshot](Screenshots\SDM4.png)
+![Third Screenshot](Screenshots/SDM4.png)
     
     3- The React dashboard fetches and displays real-time data and historical data based on user-selected filters. 
 
-![Fourth Screenshot](Screenshots\SDM5.png)
+![Fourth Screenshot](Screenshots/SDM5.png)
 
-![Fifth Screenshot](Screenshots\SDM6.png)
+![Fifth Screenshot](Screenshots/SDM6.png)
 
     4- The optional Node-RED dashboard provides an alternative visualization interface. 
 
-![6th Screenshot](Screenshots\SDM2.png)
+![6th Screenshot](Screenshots/SDM2.png)
 
-![7th Screenshot](Screenshots\SDM7.png)      ![8th Screenshot](Screenshots\SDM8.png)
+![7th Screenshot](Screenshots/SDM7.png)      ![8th Screenshot](Screenshots/SDM8.png)
 
     5- Multi-container containerization using Docker, ensuring seamless deployment and scalability.
 
-![9th Screenshot](Screenshots\SDM9.png)
+![9th Screenshot](Screenshots/SDM9.png)
 
 Conclusion 
 

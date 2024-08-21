@@ -50,7 +50,7 @@ Containerization with Docker
 
     1- The simulated Arduino device publishes data to the MQTT broker. 
 
-![First Screenshot](Screenshots\SDM1.png)
+![First Screenshot](..\screenshots\SDM1.png)
 
     2- The Node.js server subscribes to the MQTT topic, processes the data, and stores it in the MySQL database. 
 

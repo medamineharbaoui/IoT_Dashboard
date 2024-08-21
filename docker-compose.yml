@@ -1,0 +1,48 @@
+
+services:
+  app:
+    build: ./nodejs_srv
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    environment:
+      - NODE_ENV=production
+      - CONFIG_FILE=config.json 
+
+    volumes:
+      - ./node_srv:/app
+
+  react_app:
+    build: ./frontend
+    ports:
+      - "4000:80"  # Map container's port 80 to host's port 4000
+    depends_on:
+      - app  # Wait for the Node.js server to be ready
+    environment:
+      - REACT_APP_API_URL=http://app:3000  # linking to the Node.js server
+
+  nodered:
+    image: nodered/node-red:latest
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./node_red_srv/flows.json:/data/flows.json
+    command: /bin/sh -c "chmod -R 777 /data && npm start -- --userDir /data" 
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: iot_data
+    volumes:  
+      - mysql_data:/var/lib/mysql
+          
+volumes:
+  mysql_data:
+
+
+
+
